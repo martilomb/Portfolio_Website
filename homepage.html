@@ -1,0 +1,135 @@
+
+<!DOCTYPE HTML>
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="hompageDesign.css">
+   
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Marti Lombarte Soler</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hi! I'm Marti Lombarte Soler, I am a Student as ESADE University,
+              studying for a Bachelors of Business Administration. In addition, 
+              I also am currently taking a full-developer course on Codecademy! 
+              I have also taught myself countless things, such as electrical work, 
+              welding, etc!
+            </p>
+            <p>
+                My passion for bringing my ideas to life has resulted in many
+                attempts at starting a business. These attempts included an
+                online gaming-centered communication system and a new form
+                of the online marketplace. In each attempt I was forced to 
+                learn new aspects of marketing/analytics, creating business plans,
+                and developing designs, all without formal education but with my desire
+                to succeed. 
+            </p>
+            <p>
+                I believe I will be able to apply what I have learned in unique ways as 
+                well as learn whatever my future team demands of me. My natural curiosity 
+                allows me to thrive and learn on my own. I have developed mechanical motorized 
+                vehicles because of my interest in the development and learning of how it works. 
+                I also work on my motorcycles on my own to learn to develop the skills necessary 
+                to repair them myself. I find value in learning and choose to pursue my interests 
+                for personal gain.
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">6,550,058,724</span> seconds!
+            </p>
+          </div>
+          <img src="https://media.licdn.com/dms/image/C5603AQE_I1J81v8UHg/profile-displayphoto-shrink_800_800/0/1603070520869?e=2147483647&v=beta&t=EKiOctILwkfEgOcUnNrUrugFFXMgSbnDlR4HC5H0st8" alt="A photo of yours truly" class="portrait">
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Learning Git and Github</h3>
+          </summary>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Diagram_for_the_computation_of_Bernoulli_numbers.jpg/220px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg" alt="Lovelace's diagram from note G, the first published computer
+          algorithm" class="project-image">
+          <p class="project-description">
+            The first thing I publicly wrote.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Horoscope Calculator</h3>
+          </summary>
+          <img src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555925585/shape/mentalfloss/analyticalmachine_babbage_london.jpg?itok=5vRTwQjb" alt="An original model of part of the Analytical Engine" class="project-image">
+          <p class="project-description">
+            A program that gives truly random results based on your date of birth.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>This very site!</h3>
+          </summary>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Ada_Mascot_with_slogan.svg/220px-Ada_Mascot_with_slogan.svg.png" alt="Ada mascot, a black and cobalt blue hummingbird, flying above the
+          slogan &quot;Time-tested, safe and secure&quot;" class="project-image">
+          <p class="project-description">
+            Bringing my javascript, css, and html together for this.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-aws"></i>
+          <i class="fab fa-sketch"></i>
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-chrome"></i>
+          <i class="fas fa-terminal"></i>
+          <i class="fas fa-universal-access"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </section>
+    </main>
+    <section id="contact">
+        <h2>Contact</h2>
+    </section>
+    <footer>Made by <span class="heart">me</span> in Detroit</footer>
+  
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "04-02-2023";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+
+</body></html>
